@@ -1,5 +1,5 @@
 %define upstream_name    Text-Trim
-%define upstream_version 1.01
+%define upstream_version 1.02
 
 Name:       perl-%{upstream_name}
 Version:    %perl_convert_version %{upstream_version}
