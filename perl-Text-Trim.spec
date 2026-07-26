@@ -1,15 +1,13 @@
 %define upstream_name    Text-Trim
-%define upstream_version 1.04
-
 Name:       perl-%{upstream_name}
-Version:    %{upstream_version}
-Release:    1
+Version:    1.04
+Release:    2
 
 Summary:    Remove leading and/or trailing whitespace from strings
 License:    GPL+ or Artistic
 Group:      Development/Perl
 Url:        https://github.com/rjt-pl/Text-Trim
-Source0:    https://cpan.metacpan.org/authors/id/R/RJ/RJT/Text-Trim-%{upstream_version}.tar.gz
+Source0:    https://cpan.metacpan.org/authors/id/R/RJ/RJT/Text-Trim-%{version}.tar.gz
 
 BuildRequires:	make
 BuildRequires: perl(Test::More)
@@ -23,7 +21,7 @@ whitespace from strings. It is basically a wrapper around some simple
 regexes with a flexible context-based interface.
 
 %prep
-%setup -q -n %{upstream_name}-%{upstream_version}
+%setup -q -n %{upstream_name}-%{version}
 
 %build
 %{__perl} Makefile.PL INSTALLDIRS=vendor
