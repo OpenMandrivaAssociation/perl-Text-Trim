@@ -2,7 +2,7 @@
 %define upstream_version 1.04
 Name:       perl-%{upstream_name}
 Version:	1.04
-Release:	2
+Release:	3
 
 Summary:    Remove leading and/or trailing whitespace from strings
 License:    GPL+ or Artistic
@@ -11,10 +11,10 @@ Url:        https://github.com/rjt-pl/Text-Trim
 Source0:	https://cpan.metacpan.org/authors/id/R/RJ/RJT/Text-Trim-1.04.tar.gz
 
 BuildRequires:	make
+BuildRequires:	perl-devel
 BuildRequires: perl(Test::More)
 BuildRequires: perl(Module::Build::Compat)
 BuildArch: noarch
-BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}
 
 %description
 This module provides functions for removing leading and/or trailing
@@ -25,7 +25,7 @@ regexes with a flexible context-based interface.
 %setup -q -n Text-Trim-1.04
 
 %build
-%{__perl} Makefile.PL INSTALLDIRS=vendor
+perl Makefile.PL INSTALLDIRS=vendor
 
 %{make}
 
