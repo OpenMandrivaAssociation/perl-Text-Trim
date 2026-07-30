@@ -1,13 +1,14 @@
 %define upstream_name    Text-Trim
+%define upstream_version 1.04
 Name:       perl-%{upstream_name}
-Version:    1.04
-Release:    2
+Version:	1.04
+Release:	1
 
 Summary:    Remove leading and/or trailing whitespace from strings
 License:    GPL+ or Artistic
 Group:      Development/Perl
 Url:        https://github.com/rjt-pl/Text-Trim
-Source0:    https://cpan.metacpan.org/authors/id/R/RJ/RJT/Text-Trim-%{version}.tar.gz
+Source0:	https://cpan.metacpan.org/authors/id/R/RJ/RJT/Text-Trim-1.04.tar.gz
 
 BuildRequires:	make
 BuildRequires: perl(Test::More)
@@ -47,19 +48,3 @@ rm -rf %buildroot
 
 
 
-%changelog
-* Mon Apr 18 2011 Funda Wang <fwang@mandriva.org> 1.20.0-2mdv2011.0
-+ Revision: 655235
-- rebuild for updated spec-helper
-
-* Wed Apr 07 2010 Jérôme Quelin <jquelin@mandriva.org> 1.20.0-1mdv2011.0
-+ Revision: 532720
-- update to 1.02
-
-* Tue Dec 22 2009 Jérôme Quelin <jquelin@mandriva.org> 1.10.0-1mdv2010.1
-+ Revision: 481402
-- import perl-Text-Trim
-
-
-* Tue Dec 22 2009 cpan2dist 1.01-1mdv
-- initial mdv release, generated with cpan2dist
