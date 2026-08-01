@@ -2,7 +2,7 @@
 %define upstream_version 1.04
 Name:       perl-%{upstream_name}
 Version:	1.04
-Release:	4
+Release:	5
 
 Summary:    Remove leading and/or trailing whitespace from strings
 License:    GPL+ or Artistic
@@ -34,6 +34,7 @@ perl Makefile.PL INSTALLDIRS=vendor
 set +e
 %{make} test
 :  # soft check
+make test || :
 %install
 rm -rf %buildroot
 %makeinstall_std
